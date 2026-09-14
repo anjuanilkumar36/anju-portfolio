@@ -105,19 +105,7 @@ function About() {
 
           <div className="visual-number"></div>
 
-          <div className="about-image">
-
-            
-
-            <img
-              src="/csphoto.png"
-              alt="Anju Anilkumar"
-            />
-
-          </div>
-
-          
-
+  
         </div>
 
       </div>
