@@ -571,46 +571,149 @@
    RESPONSIVE
 ========================= */
 
-@media (max-width: 900px) {
-
-  .home-container {
-    grid-template-columns: 1fr;
-
-    padding: 80px 8%;
-
-    gap: 60px;
-  }
-
-  .home-image-wrapper {
-    margin: 0 auto;
-
-    max-width: 450px;
-  }
-
-}
-
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
 
 @media (max-width: 600px) {
 
+  .home {
+    min-height: auto;
+    width: 100%;
+    overflow: hidden;
+  }
+
   .home-container {
-    padding: 60px 6%;
+    width: 100%;
+    max-width: 100%;
+    padding: 50px 20px 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 45px;
+  }
+
+  /* LEFT CONTENT */
+
+  .home-content {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .hello {
+    font-size: 11px;
+    letter-spacing: 2.5px;
+    margin-bottom: 12px;
   }
 
   .home-content h1 {
-    font-size: 65px;
+    font-size: clamp(48px, 16vw, 65px);
+    line-height: 0.9;
+    letter-spacing: -3px;
+    word-break: normal;
   }
 
   .home-content h2 {
-    font-size: 45px;
+    font-size: clamp(32px, 11vw, 45px);
+    line-height: 1;
+    letter-spacing: -2px;
+    margin: 15px 0;
   }
 
+  .role {
+    font-size: 19px;
+    line-height: 1.4;
+    margin: 20px 0 12px;
+  }
+
+  .description {
+    width: 100%;
+    max-width: 100%;
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+
+  /* BUTTONS */
+
   .home-buttons {
+    width: 100%;
+    display: flex;
     flex-direction: column;
+    gap: 12px;
+    margin-top: 28px;
   }
 
   .primary-btn,
   .secondary-btn {
+    width: 100%;
+    padding: 14px 20px;
     text-align: center;
+    font-size: 14px;
+  }
+
+
+  /* SOCIAL LINKS */
+
+  .social-links {
+    margin-top: 28px;
+    gap: 10px;
+  }
+
+  .social-links a {
+    width: 42px;
+    height: 42px;
+    font-size: 12px;
+  }
+
+
+  /* IMAGE */
+
+  .home-image-wrapper {
+    width: 100%;
+    max-width: 330px;
+    margin: 0 auto;
+  }
+
+  .image-box {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+  }
+
+  .image-corner {
+    width: 25px;
+    height: 25px;
+  }
+
+  .top-left {
+    top: -7px;
+    left: -7px;
+  }
+
+  .bottom-right {
+    bottom: -7px;
+    right: -7px;
+  }
+
+
+  /* CODE BACKGROUND */
+
+  .floating-code {
+    font-size: 9px;
+    opacity: 0.08;
+  }
+
+  /* Hide some code decorations on small screens */
+
+  .code-11,
+  .code-12,
+  .code-16,
+  .code-17,
+  .code-19,
+  .code-21,
+  .code-22,
+  .code-24 {
+    display: none;
   }
 
 }
