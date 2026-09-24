@@ -1,4 +1,8 @@
 import "./Home.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
+
 
 
 function Home() {
@@ -85,26 +89,50 @@ function Home() {
           </p>
 
           <h1>
-            ANJU
+            ANJU 
           </h1>
 
           <h2>
             ANILKUMAR
           </h2>
 
-          <p className="role">
-            Python Developer | Django | FastAPI | MySQL | React
-          </p>
+         <div className="skills-marquee">
+  <div className="skills-track">
+    <span>B.Tech Graduate</span>
+    <span>Computer Science</span>
+    <span>Developer</span>
+    <span>Python</span>
+    <span>Django</span>
+    <span>FastAPI</span>
+    <span>React</span>
+    <span>SQL</span>
+    <span>MySQL</span>
+    <span>HTML</span>
+    <span>CSS</span>
+    <span>JavaScript</span>
 
-          <p className="description">
-            B.Tech Computer Science and Engineering graduate with who
-            turning ideas into practical software solutions using Python and modern web technologies.
-          </p>
+    {/* Duplicate for continuous animation */}
+    <span>B.Tech Graduate</span>
+    <span>Computer Science</span>
+    <span>Developer</span>
+    <span>Python</span>
+    <span>Django</span>
+    <span>FastAPI</span>
+    <span>React</span>
+    <span>SQL</span>
+    <span>MySQL</span>
+    <span>HTML</span>
+    <span>CSS</span>
+    <span>JavaScript</span>
+  </div>
+</div>
+
+          
 
           <div className="home-buttons">
 
             <a href="#projects" className="primary-btn">
-              See My Projects
+              View My Projects
             </a>
 
             <a href="/ANJU_ANILKUMAR_RESUME.pdf" className="primary-btn">
@@ -115,61 +143,58 @@ function Home() {
               Contact Me
             </a>
 
+           
+
+            <a
+            href="https://www.linkedin.com/in/anjuanilkumar66"
+            className="primary-btn"
+            
+          >
+            <FontAwesomeIcon icon={faLinkedinIn} />
+          </a>
+
+          <a
+            href="https://github.com/anjuanilkumar36"
+            className="primary-btn"
+            
+          >
+            <FontAwesomeIcon icon={faGithub} />
+          </a>
+
+         
             
 
           </div>
 
+           </div>
+
           <div className="social-links">
 
-            <a href="mailto:anjuanilkumar36@gmail.com">
-              ✉
-            </a>
-
-            <a
-              href="https://github.com/anjuanilkumar36"
-              target="_blank"
-              rel="noreferrer"
-            >
-              GH
-            </a>
-
-            <a
-              href="https://linkedin.com/in/anjuanilkumar"
-              target="_blank"
-              rel="noreferrer"
-            >
-              in
-            </a>
-
-            <a href="tel:+91 9526721534">
-              ☎
-            </a>
+            
 
           </div>
 
+       
+
+
         </div>
+
+
 
 
         {/* Profile Image */}
 
-        <div className="home-image-wrapper">
+  <div className="home-image-wrapper">
+  <div className="image-box">
+    <img
+      src="/anjuphoto.png"
+      alt="Anju Anilkumar"
+    />
+  </div>
+  </div>
+        
 
-          <div className="image-corner top-left"></div>
-
-          <div className="image-corner bottom-right"></div>
-
-          <div className="image-box">
-
-            <img
-              src="/anjuphoto.png"
-              alt="Anju Anilkumar"
-            />
-
-          </div>
-
-        </div>
-
-      </div>
+      
 
     </section>
   );

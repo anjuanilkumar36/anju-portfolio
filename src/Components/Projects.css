@@ -1,709 +1,237 @@
-/* =========================
-   PROJECTS SECTION
-========================= */
-
 .projects {
-  width: 100%;
-  min-height: 100vh;
-  background: #000;
-  color: #fff;
-  padding: 120px 60px;
-  border-top: 1px solid #1c1c1c;
+  background: #113354;
+  padding: 70px 35px;
+  color: #ffffff;
 }
 
 .projects-container {
-  max-width: 1400px;
+  max-width: 1200px;
   margin: 0 auto;
-}
 
-/* =========================
-   PROJECT HEADING + DIRECTORY
-========================= */
+  border: 3px solid #ffffff;
+  border-radius: 7px;
 
-.projects-header {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 80px;
-  align-items: start;
-  margin-bottom: 80px;
+  padding: 35px;
 }
 
 
-/* LEFT HEADING */
+/* Heading */
 
 .projects-heading {
-  display: flex;
-  flex-direction: column;
+  margin-bottom: 35px;
+}
+
+.projects-heading p {
+  font-size: 13px;
+  font-weight: 600;
+  
+  letter-spacing: 3px;
+  color: #ffffff;
+  margin-bottom: 8px;
 }
 
 .projects-heading h1 {
-  font-size: clamp(65px, 8vw, 115px);
-  line-height: 0.85;
-  letter-spacing: -5px;
-  font-weight: 800;
-  text-transform: uppercase;
+  font-size: 48px;
+  margin: 0;
+  color: #ffffff;
+  text-align: center;
 }
 
 
-/* RIGHT PROJECT DIRECTORY */
+/* Project Grid */
 
-.project-directory {
-  width: 100%;
-  max-width: 600px;
-  margin-left: auto;
-  border-top: 1px solid #333;
-}
-
-
-/* DIRECTORY HEADER */
-
-.directory-title {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  padding: 15px 0;
-
-  border-bottom: 1px solid #222;
-
-  font-size: 10px;
-  letter-spacing: 2px;
-  color: #666;
-}
-
-
-/* DIRECTORY LIST */
-
-.directory-list {
-  display: flex;
-  flex-direction: column;
-}
-
-
-/* PROJECT ITEM */
-
-.directory-item {
+.projects-grid {
   display: grid;
-  grid-template-columns: 45px 1fr 30px;
-  align-items: center;
-  gap: 15px;
 
-  padding: 18px 0;
+  grid-template-columns: repeat(2, 1fr);
 
-  border-bottom: 1px solid #222;
-
-  color: #fff;
-  text-decoration: none;
-
-  transition: all 0.3s ease;
+  gap: 35px;
 }
 
 
-/* NUMBER */
-
-.directory-number {
-  font-family: "Courier New", monospace;
-  font-size: 12px;
-  color: #666;
-}
-
-
-/* PROJECT NAME */
-
-.directory-name {
-  font-size: 15px;
-  font-weight: 500;
-  transition: all 0.3s ease;
-}
-
-
-/* ARROW */
-
-.directory-arrow {
-  font-size: 18px;
-  color: #555;
-
-  transition: all 0.3s ease;
-}
-
-
-/* HOVER */
-
-.directory-item:hover {
-  padding-left: 10px;
-}
-
-.directory-item:hover .directory-number {
-  color: #fff;
-}
-
-.directory-item:hover .directory-name {
-  font-weight: 600;
-}
-
-.directory-item:hover .directory-arrow {
-  color: #fff;
-  transform: translate(4px, -4px);
-}
-
-
-/* =========================
-   SCROLL POSITION
-========================= */
+/* Project Card */
 
 .project-card {
-  scroll-margin-top: 100px;
-}
+  min-height: 330px;
 
+  border: 3px solid #ffffff;
+  border-radius: 7px;
 
-/* =========================
-   RESPONSIVE
-========================= */
+  padding: 30px;
 
-@media (max-width: 900px) {
-
-  .projects-header {
-    grid-template-columns: 1fr;
-    gap: 50px;
-  }
-
-  .project-directory {
-    max-width: 100%;
-    margin-left: 0;
-  }
-
-}
-
-
-@media (max-width: 600px) {
-
-  .projects-header {
-    gap: 40px;
-  }
-
-  .projects-heading h1 {
-    font-size: 65px;
-    letter-spacing: -3px;
-  }
-
-  .directory-item {
-    grid-template-columns: 35px 1fr 25px;
-  }
-
-  .directory-name {
-    font-size: 14px;
-  }
-
-}
-
-/* =========================
-   PROJECT HEADING + DIRECTORY
-========================= */
-
-.projects-header {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 80px;
-  align-items: start;
-  margin-bottom: 80px;
-}
-
-
-/* LEFT HEADING */
-
-.projects-heading {
   display: flex;
   flex-direction: column;
-}
 
-.projects-heading h1 {
-  font-size: clamp(65px, 8vw, 115px);
-  line-height: 0.85;
-  letter-spacing: -5px;
-  font-weight: 600;
-  text-transform: uppercase;
+  background: #335678;
 }
 
 
-/* RIGHT PROJECT DIRECTORY */
+/* Number */
 
-.project-directory {
-  width: 100%;
-  max-width: 600px;
-  margin-left: auto;
-  border-top: 1px solid #333;
-}
+.project-number {
+  font-size: 12px;
+  font-weight: 700;
 
-
-/* DIRECTORY HEADER */
-
-.directory-title {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  padding: 15px 0;
-
-  border-bottom: 1px solid #222;
-
-  font-size: 10px;
   letter-spacing: 2px;
-  color: #666;
+
+  color: #b9c9d8;
+
+  margin-bottom: 35px;
 }
 
 
-/* DIRECTORY LIST */
+/* Title */
 
-.directory-list {
-  display: flex;
-  flex-direction: column;
+.project-card h2 {
+  font-size: 27px;
+  line-height: 1.25;
+
+  margin: 0 0 12px;
+
+  color: #ffffff;
 }
 
 
-/* PROJECT ITEM */
+/* Technologies */
 
-.directory-item {
-  display: grid;
-  grid-template-columns: 45px 1fr 30px;
-  align-items: center;
-  gap: 15px;
+.project-technologies {
+  color: #d5e0ea;
 
-  padding: 18px 0;
-
-  border-bottom: 1px solid #222;
-
-  color: #fff;
-  text-decoration: none;
-
-  transition: all 0.3s ease;
-}
-
-
-/* NUMBER */
-
-.directory-number {
-  font-family: "Courier New", monospace;
-  font-size: 12px;
-  color: #666;
-}
-
-
-/* PROJECT NAME */
-
-.directory-name {
-  font-size: 15px;
-  font-weight: 500;
-  transition: all 0.3s ease;
-}
-
-
-/* ARROW */
-
-.directory-arrow {
-  font-size: 18px;
-  color: #555;
-
-  transition: all 0.3s ease;
-}
-
-
-/* HOVER */
-
-.directory-item:hover {
-  padding-left: 10px;
-}
-
-.directory-item:hover .directory-number {
-  color: #fff;
-}
-
-.directory-item:hover .directory-name {
+  font-size: 14px;
   font-weight: 600;
-}
 
-.directory-item:hover .directory-arrow {
-  color: #fff;
-  transform: translate(4px, -4px);
+  margin: 0 0 20px;
 }
 
 
-/* =========================
-   SCROLL POSITION
-========================= */
+/* Description */
 
-.project-card {
-  scroll-margin-top: 100px;
+.project-description {
+  color: #c5d2de;
+
+  font-size: 14px;
+  line-height: 1.7;
+
+  margin: 0;
+
+  max-width: 500px;
 }
 
 
-/* =========================
-   RESPONSIVE
-========================= */
+/* Bottom */
 
-@media (max-width: 900px) {
+.project-bottom {
+  margin-top: auto;
 
-  .projects-header {
-    grid-template-columns: 1fr;
-    gap: 50px;
-  }
+  padding-top: 30px;
 
-  .project-directory {
-    max-width: 100%;
-    margin-left: 0;
-  }
-
-}
-
-
-@media (max-width: 600px) {
-
-  .projects-header {
-    gap: 40px;
-  }
-
-  .projects-heading h1 {
-    font-size: 65px;
-    letter-spacing: -3px;
-  }
-
-  .directory-item {
-    grid-template-columns: 35px 1fr 25px;
-  }
-
-  .directory-name {
-    font-size: 14px;
-  }
-
-}
-
-/* =========================
-   HEADER
-========================= */
-
-.projects-header {
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  align-items: flex-end;
-  gap: 60px;
-  margin-bottom: 80px;
-}
 
-.projects-label  {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-
-  margin-bottom: 25px;
-
-  color: #777;
-
-  font-family: "Courier New", monospace;
-  font-size: 12px;
-  font-weight: 600;
-
-  letter-spacing: 4px;
-}
-.projects-label::before {
-  content: "";
-
-  width: 35px;
-  height: 1px;
-
-  background: #555;
-}
-.projects-header h1 {
-  font-size: clamp(60px, 8vw, 115px);
-  line-height: 0.85;
-  letter-spacing: -5px;
-  font-weight: 800;
-  text-transform: uppercase;
-}
-
-.projects-header h1 span {
-  color: #777;
-}
-
-.projects-intro {
-  max-width: 430px;
-  color: #888;
-  font-size: 15px;
-  line-height: 1.8;
-  margin-bottom: 5px;
-}
-
-
-/* =========================
-   PROJECT LIST
-========================= */
-
-.projects-list {
-  display: flex;
-  flex-direction: column;
   gap: 20px;
 }
 
 
-/* =========================
-   PROJECT CARD
-========================= */
+/* Team / Individual */
+
+.project-type {
+  font-size: 12px;
+
+  color: #b9c9d8;
+
+  letter-spacing: 1px;
+}
+
+
+/* GitHub */
+
+.github-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+
+  color: #ffffff;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  text-decoration: none;
+
+  border-bottom: 1px solid #ffffff;
+
+  padding-bottom: 4px;
+
+  transition: 0.3s ease;
+}
+
+.github-link svg {
+  font-size: 17px;
+}
+
+.github-link:hover {
+  color: #9fc5e5;
+  border-color: #9fc5e5;
+}
+
+
+/* Third project starts from left */
+
+.project-card:nth-child(3) {
+  grid-column: 1;
+}
+
+
+/* Hover */
 
 .project-card {
-  position: relative;
-  border: 1px solid #252525;
-  background: #030303;
-  padding: 35px 40px;
-
   transition:
-    border-color 0.35s ease,
-    transform 0.35s ease,
-    background 0.35s ease;
+    transform 0.3s ease,
+    background 0.3s ease;
 }
 
 .project-card:hover {
-  border-color: #fff;
   transform: translateY(-5px);
-  background: #070707;
+  background: #153c5f;
 }
 
 
-/* =========================
-   PROJECT TOP
-========================= */
+/* Mobile */
 
-.project-top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  padding-bottom: 25px;
-  border-bottom: 1px solid #1c1c1c;
-}
-
-.project-number {
-  font-family: "Courier New", monospace;
-  font-size: 13px;
-  color: #777;
-}
-
-.project-type {
-  font-size: 10px;
-  letter-spacing: 2px;
-  color: #555;
-}
-
-
-/* =========================
-   PROJECT MAIN
-========================= */
-
-.project-main {
-  display: grid;
-  grid-template-columns: 1.3fr 1fr;
-  gap: 70px;
-
-  padding: 45px 0;
-}
-
-.project-title-area h2 {
-  max-width: 700px;
-
-  font-size: clamp(32px, 4vw, 58px);
-  line-height: 1;
-  letter-spacing: -2px;
-  font-weight: 700;
-
-  margin-bottom: 40px;
-}
-
-
-/* =========================
-   PROJECT LINKS
-========================= */
-
-.project-links {
-  display: flex;
-  gap: 12px;
-}
-
-.project-links a {
-  display: inline-flex;
-  align-items: center;
-  gap: 25px;
-
-  padding: 13px 18px;
-
-  border: 1px solid #333;
-
-  color: #fff;
-  text-decoration: none;
-
-  font-size: 10px;
-  letter-spacing: 1.5px;
-
-  transition: all 0.3s ease;
-}
-
-.project-links a:hover {
-  background: #fff;
-  color: #000;
-  border-color: #fff;
-}
-
-.project-links strong {
-  font-size: 17px;
-  font-weight: 400;
-}
-
-
-/* =========================
-   DESCRIPTION
-========================= */
-
-.project-description {
-  display: flex;
-  align-items: center;
-}
-
-.project-description p {
-  max-width: 500px;
-
-  color: #999;
-  font-size: 15px;
-  line-height: 1.9;
-}
-
-
-/* =========================
-   TECHNOLOGIES
-========================= */
-
-.project-bottom {
-  display: grid;
-  grid-template-columns: 160px 1fr;
-  gap: 30px;
-
-  padding-top: 25px;
-
-  border-top: 1px solid #1c1c1c;
-}
-
-.technology-label {
-  font-size: 10px;
-  letter-spacing: 2px;
-  color: #555;
-  padding-top: 7px;
-}
-
-.technology-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.technology-list span {
-  padding: 8px 13px;
-
-  border: 1px solid #292929;
-
-  color: #aaa;
-
-  font-family: "Courier New", monospace;
-  font-size: 11px;
-
-  transition: all 0.3s ease;
-}
-
-.project-card:hover .technology-list span {
-  border-color: #444;
-  color: #fff;
-}
-
-
-/* =========================
-   FOOTER
-========================= */
-
-.projects-footer {
-  display: flex;
-  justify-content: space-between;
-
-  margin-top: 70px;
-  padding-top: 20px;
-
-  border-top: 1px solid #525050;
-
-  color: #807b7b;
-  font-size: 10px;
-  letter-spacing: 2px;
-}
-
-
-/* =========================
-   RESPONSIVE
-========================= */
-
-@media (max-width: 900px) {
+@media (max-width: 700px) {
 
   .projects {
-    padding: 90px 30px;
+    padding: 50px 15px;
   }
 
-  .projects-header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 35px;
+  .projects-container {
+    padding: 25px 18px;
   }
 
-  .project-main {
+  .projects-heading h1 {
+    font-size: 38px;
+  }
+
+  .projects-grid {
     grid-template-columns: 1fr;
-    gap: 35px;
+    gap: 20px;
   }
 
-  .project-description {
-    display: block;
-  }
-}
-
-
-@media (max-width: 600px) {
-
-  .projects {
-    padding: 70px 20px;
-  }
-
-  .projects-header h1 {
-    letter-spacing: -3px;
+  .project-card:nth-child(3) {
+    grid-column: auto;
   }
 
   .project-card {
-    padding: 25px 20px;
+    min-height: 300px;
+    padding: 24px;
   }
 
-  .project-main {
-    padding: 30px 0;
-  }
-
-  .project-title-area h2 {
-    font-size: 32px;
-    margin-bottom: 30px;
-  }
-
-  .project-links {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .project-links a {
-    justify-content: space-between;
+  .project-card h2 {
+    font-size: 23px;
   }
 
   .project-bottom {
-    grid-template-columns: 1fr;
-    gap: 15px;
-  }
-
-  .projects-footer {
+    align-items: flex-start;
     flex-direction: column;
-    gap: 12px;
   }
 }
