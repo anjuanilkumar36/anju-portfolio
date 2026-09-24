@@ -145,7 +145,7 @@
    MOBILE
 ========================= */
 
-@media (max-width: 900px) {
+@media (max-width: 600px) {
 
   .skills-grid {
     grid-template-columns: repeat(2, 1fr);
