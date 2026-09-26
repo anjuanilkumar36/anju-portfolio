@@ -1,91 +1,260 @@
+import { useEffect, useRef } from "react";
 import "./Projects.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import AnimatedBackground from "./AnimatedBackground";
+
+const projects = [
+  {
+    number: "",
+    title: "AI-Based Cybercrime Prevention",
+    description:
+      "A web application designed to detect and help prevent harmful activities on social media using AI-based content analysis.",
+
+    technologies: [
+      "Python",
+      "Django",
+      "MySQL",
+      "REST APIs",
+    ],
+
+    image: "CybercrimeP.jpeg",
+
+    github:
+      "https://github.com/anjuanilkumar36/cybercrime-prevention",
+  },
+
+  {
+    number: "",
+    title: "ShopEase",
+    description:
+      "A full-stack e-commerce web application with authentication, product management, shopping cart, order management, and an admin dashboard.",
+
+    technologies: [
+      "React.js",
+      "FastAPI",
+      "Python",
+      "JWT",
+    ],
+
+    image: "ShopEase.jpeg",
+
+    github:
+      "https://github.com/anjuanilkumar36/shopease---Ecommerce",
+  },
+
+  {
+    number: "",
+    title: "GLB Model Viewer",
+    description:
+      "A web-based 3D model viewer that allows users to load and interact with GLB models through a modern React interface.",
+
+    technologies: [
+      "React",
+      "JavaScript",
+      "Three.js",
+      "Supabase",
+    ],
+
+    image: "GLB.jpeg",
+
+    github:
+      "https://github.com/anjuanilkumar36/glb-model-viewer",
+  },
+];
+
 
 function Projects() {
-  const projects = [
-    {
-      title: "AI-Based Cybercrime Prevention System",
-      technologies: "Python | Django | MySQL",
-      description:
-        "A web-based system developed to help identify and prevent cybercrime-related activities on social media using AI-based analysis.",
-      type: "Team Project",
-      github:
-        "https://github.com/anjuanilkumar36/cybercrime-prevention",
-    },
-    {
-      title: "ShopEase",
-      technologies: "React | FastAPI | Python | SQL",
-      description:
-        "A full-stack e-commerce application with user authentication, product management and API-based communication.",
-      type: "Individual Project",
-      github: "https://github.com/anjuanilkumar36/shopease---Ecommerce",
-    },
-    {
-      title: "GLB Model Viewer",
-      technologies: "React | JavaScript | Supabase | Three.js",
-      description:
-        "An interactive web application for viewing and exploring 3D GLB models directly in the browser.",
-      type: "Individual Project",
-      github:
-        "https://github.com/anjuanilkumar36/glb-model-viewer",
-    },
-    
-  ];
+
+  const projectRefs = useRef([]);
+
+
+  useEffect(() => {
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+
+        entries.forEach((entry) => {
+
+          if (entry.isIntersecting) {
+
+            entry.target.classList.add(
+              "project-visible"
+            );
+
+          }
+
+        });
+
+      },
+      {
+        threshold: 0.18,
+      }
+    );
+
+
+    projectRefs.current.forEach((project) => {
+
+      if (project) {
+        observer.observe(project);
+      }
+
+    });
+
+
+    return () => {
+
+      projectRefs.current.forEach((project) => {
+
+        if (project) {
+          observer.unobserve(project);
+        }
+
+      });
+
+    };
+
+  }, []);
+
 
   return (
-    <section className="projects" id="projects">
-      <div className="projects-container">
+
+    <section
+      className="projects-section"
+      id="projects"
+    >
+
+      {/* Animated red dots */}
+
+      <AnimatedBackground />
+
+
+      {/* Main projects frame */}
+
+      <div className="projects-frame">
+
+
+        {/* =========================
+            SECTION HEADING
+        ========================== */}
 
         <div className="projects-heading">
-         
-          <h1>Projects</h1>
+
+          <span className="projects-number">
+            
+          </span>
+
+          <div>
+
+            
+
+            <h2>PROJECTS</h2>
+
+          </div>
+
         </div>
 
-        <div className="projects-grid">
+
+        {/* =========================
+            PROJECT LIST
+        ========================== */}
+
+        <div className="projects-list">
 
           {projects.map((project, index) => (
-            <article className="project-card" key={project.title}>
 
-              <span className="project-number">
-                0{index + 1}
-              </span>
+            <article
+              key={project.number}
 
-              <h2>{project.title}</h2>
+              ref={(element) => {
+                projectRefs.current[index] =
+                  element;
+              }}
 
-              <p className="project-technologies">
-                {project.technologies}
-              </p>
+              className={`project-card ${
+                index % 2 === 0
+                  ? "project-from-left"
+                  : "project-from-right"
+              }`}
+            >
 
-              <p className="project-description">
-                {project.description}
-              </p>
 
-              <div className="project-bottom">
+              {/* =====================
+                  PROJECT IMAGE
+              ====================== */}
 
-                <span className="project-type">
-                  {project.type}
+              <div className="project-image">
+
+                <img
+                  src={project.image}
+                  alt={project.title}
+                />
+
+                <span className="project-index">
+                  {project.number}
                 </span>
+
+              </div>
+
+
+              {/* =====================
+                  PROJECT INFORMATION
+              ====================== */}
+
+              <div className="project-info">
+
+                <h3>
+                  {project.title}
+                </h3>
+
+
+                <p className="project-description">
+                  {project.description}
+                </p>
+
+
+                {/* Technologies */}
+
+                <div className="project-technologies">
+
+                  {project.technologies.map(
+                    (technology) => (
+
+                      <span key={technology}>
+                        {technology}
+                      </span>
+
+                    )
+                  )}
+
+                </div>
+
+
+                {/* GitHub */}
 
                 <a
                   href={project.github}
                   target="_blank"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   className="github-link"
                 >
-                  View on GitHub
-                  <FontAwesomeIcon icon={faGithub} />
+
+                  VIEW ON GITHUB
+
+                  <span>↗</span>
+
                 </a>
 
               </div>
 
             </article>
+
           ))}
 
         </div>
 
       </div>
+
     </section>
+
   );
 }
 

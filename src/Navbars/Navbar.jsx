@@ -13,7 +13,7 @@ function Navbar() {
         className="logo"
         onClick={() => setMenuOpen(false)}
       >
-        ANJU ANILKUMAR
+        A. ANJU
       </a>
 
       <button
@@ -25,6 +25,10 @@ function Navbar() {
 
       <div className={`nav-links ${menuOpen ? "mobile-open" : ""}`}>
         <a href="#home" onClick={() => setMenuOpen(false)}>
+          Home
+        </a>
+
+        <a href="#about" onClick={() => setMenuOpen(false)}>
           About
         </a>
 
@@ -38,9 +42,7 @@ function Navbar() {
           Skills
         </a>
 
-        <a href="#education" onClick={() => setMenuOpen(false)}>
-          Education
-        </a>
+        
 
         
         <a href="#contact" onClick={() => setMenuOpen(false)}>

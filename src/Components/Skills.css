@@ -1,0 +1,530 @@
+/* =========================================
+   SKILLS SECTION
+========================================= */
+
+.skills-section {
+  width: 100%;
+  min-height: 100vh;
+ 
+  background:#111111 ;
+  color: #ffffff;
+
+  padding: 80px 35px;
+
+  box-sizing: border-box;
+
+  overflow: hidden;
+}
+
+
+/* =========================================
+   MAIN CONTAINER
+========================================= */
+
+.skills-container {
+  width: 100%;
+  max-width: 1100px;
+
+  margin: 0 auto;
+}
+
+
+/* =========================================
+   TITLE
+========================================= */
+
+.skills-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 25px;
+
+  margin-bottom: 45px;
+}
+
+.skills-title h2 {
+  margin: 0;
+
+  font-size: 42px;
+  font-weight: 600;
+
+  letter-spacing: 1px;
+
+  color: #ffffff;
+}
+
+.skills-title-line {
+  width: 100px;
+  height: 1px;
+
+  background: #c71414;
+
+  opacity: 0.6;
+}
+
+
+/* =========================================
+   SKILLS BOX
+========================================= */
+
+.skills-box {
+  width: 100%;
+
+  padding: 45px 50px;
+
+  box-sizing: border-box;
+
+  background: #202020;
+
+  border: 2px solid #ffffff;
+
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.05),
+    0 15px 40px rgba(0, 0, 0, 0.25);
+}
+
+
+/* =========================================
+   SKILLS GRID
+========================================= */
+
+.skills-list {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  column-gap: 30px;
+  row-gap: 38px;
+}
+
+
+/* =========================================
+   INDIVIDUAL SKILL
+========================================= */
+
+.skill-item {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  min-width: 0;
+
+  padding: 8px;
+
+  box-sizing: border-box;
+
+  opacity: 0;
+
+  transition:
+    transform 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 0.6s ease;
+}
+
+
+/* =========================================
+   SKILL ICON
+========================================= */
+
+.skill-icon {
+  width: 32px;
+  height: 32px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 27px;
+
+  transition:
+    transform 0.3s ease,
+    filter 0.3s ease;
+}
+
+
+/* =========================================
+   SKILL NAME
+========================================= */
+
+.skill-name {
+  color: #ffffff;
+
+  font-size: 16px;
+  font-weight: 500;
+
+  line-height: 1.3;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================
+   HOVER
+========================================= */
+
+.skill-item:hover .skill-icon {
+  transform: scale(1.15);
+
+  filter: brightness(1.2);
+}
+
+.skill-item:hover .skill-name {
+  color: #ffffff;
+}
+
+
+/* =========================================
+   INITIAL POSITIONS
+   SKILLS COME FROM DIFFERENT DIRECTIONS
+========================================= */
+
+.skill-1 {
+  transform: translate(-180px, -120px) scale(0.5);
+}
+
+.skill-2 {
+  transform: translate(180px, -150px) scale(0.5);
+}
+
+.skill-3 {
+  transform: translate(250px, 160px) scale(0.5);
+}
+
+.skill-4 {
+  transform: translate(-220px, 180px) scale(0.5);
+}
+
+.skill-5 {
+  transform: translate(200px, -200px) scale(0.5);
+}
+
+.skill-6 {
+  transform: translate(-250px, 100px) scale(0.5);
+}
+
+.skill-7 {
+  transform: translate(300px, 100px) scale(0.5);
+}
+
+.skill-8 {
+  transform: translate(-180px, -180px) scale(0.5);
+}
+
+.skill-9 {
+  transform: translate(150px, 200px) scale(0.5);
+}
+
+.skill-10 {
+  transform: translate(-300px, -80px) scale(0.5);
+}
+
+.skill-11 {
+  transform: translate(250px, -100px) scale(0.5);
+}
+
+.skill-12 {
+  transform: translate(-150px, 220px) scale(0.5);
+}
+
+.skill-13 {
+  transform: translate(280px, 180px) scale(0.5);
+}
+
+.skill-14 {
+  transform: translate(-250px, -150px) scale(0.5);
+}
+
+.skill-15 {
+  transform: translate(180px, 130px) scale(0.5);
+}
+
+.skill-16 {
+  transform: translate(-200px, 170px) scale(0.5);
+}
+
+
+/* =========================================
+   FINAL POSITION
+========================================= */
+
+.skills-visible .skill-item {
+  transform: translate(0, 0) scale(1);
+
+  opacity: 1;
+}
+
+
+/* =========================================
+   STAGGERED ARRIVAL
+========================================= */
+
+.skills-visible .skill-1 {
+  transition-delay: 0.05s;
+}
+
+.skills-visible .skill-2 {
+  transition-delay: 0.12s;
+}
+
+.skills-visible .skill-3 {
+  transition-delay: 0.19s;
+}
+
+.skills-visible .skill-4 {
+  transition-delay: 0.26s;
+}
+
+.skills-visible .skill-5 {
+  transition-delay: 0.33s;
+}
+
+.skills-visible .skill-6 {
+  transition-delay: 0.40s;
+}
+
+.skills-visible .skill-7 {
+  transition-delay: 0.47s;
+}
+
+.skills-visible .skill-8 {
+  transition-delay: 0.54s;
+}
+
+.skills-visible .skill-9 {
+  transition-delay: 0.61s;
+}
+
+.skills-visible .skill-10 {
+  transition-delay: 0.68s;
+}
+
+.skills-visible .skill-11 {
+  transition-delay: 0.75s;
+}
+
+.skills-visible .skill-12 {
+  transition-delay: 0.82s;
+}
+
+.skills-visible .skill-13 {
+  transition-delay: 0.89s;
+}
+
+.skills-visible .skill-14 {
+  transition-delay: 0.96s;
+}
+
+.skills-visible .skill-15 {
+  transition-delay: 1.03s;
+}
+
+.skills-visible .skill-16 {
+  transition-delay: 1.10s;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+  .skills-section {
+    padding: 70px 25px;
+  }
+
+  .skills-box {
+    padding: 40px 30px;
+  }
+
+  .skills-list {
+    grid-template-columns: repeat(3, 1fr);
+
+    column-gap: 20px;
+    row-gap: 32px;
+  }
+
+  .skill-name {
+    font-size: 14px;
+  }
+
+  .skill-icon {
+    font-size: 24px;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+   3 SKILLS PER ROW
+========================================= */
+
+@media (max-width: 600px) {
+
+  .skills-section {
+    min-height: auto;
+
+    padding: 55px 15px;
+  }
+
+  .skills-title {
+    gap: 15px;
+
+    margin-bottom: 30px;
+  }
+
+  .skills-title h2 {
+    font-size: 32px;
+  }
+
+  .skills-title-line {
+    width: 45px;
+  }
+
+  .skills-box {
+    padding: 30px 15px;
+  }
+
+  .skills-list {
+    grid-template-columns: repeat(3, 1fr);
+
+    column-gap: 8px;
+    row-gap: 28px;
+  }
+
+  .skill-item {
+    flex-direction: column;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    padding: 8px 3px;
+
+    text-align: center;
+  }
+
+  .skill-icon {
+    width: 30px;
+    height: 30px;
+
+    font-size: 24px;
+  }
+
+  .skill-name {
+    width: 100%;
+
+    font-size: 11px;
+
+    white-space: normal;
+
+    line-height: 1.25;
+  }
+
+
+  /* MOBILE ANIMATION DISTANCES */
+
+  .skill-1 {
+    transform: translate(-100px, -100px) scale(0.5);
+  }
+
+  .skill-2 {
+    transform: translate(100px, -120px) scale(0.5);
+  }
+
+  .skill-3 {
+    transform: translate(120px, 100px) scale(0.5);
+  }
+
+  .skill-4 {
+    transform: translate(-120px, 120px) scale(0.5);
+  }
+
+  .skill-5 {
+    transform: translate(100px, -100px) scale(0.5);
+  }
+
+  .skill-6 {
+    transform: translate(-120px, 80px) scale(0.5);
+  }
+
+  .skill-7 {
+    transform: translate(120px, 80px) scale(0.5);
+  }
+
+  .skill-8 {
+    transform: translate(-100px, -100px) scale(0.5);
+  }
+
+  .skill-9 {
+    transform: translate(100px, 100px) scale(0.5);
+  }
+
+  .skill-10 {
+    transform: translate(-120px, -80px) scale(0.5);
+  }
+
+  .skill-11 {
+    transform: translate(120px, -80px) scale(0.5);
+  }
+
+  .skill-12 {
+    transform: translate(-100px, 100px) scale(0.5);
+  }
+
+  .skill-13 {
+    transform: translate(100px, 80px) scale(0.5);
+  }
+
+  .skill-14 {
+    transform: translate(-100px, -100px) scale(0.5);
+  }
+
+  .skill-15 {
+    transform: translate(100px, 100px) scale(0.5);
+  }
+
+  .skill-16 {
+    transform: translate(-100px, 80px) scale(0.5);
+  }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 400px) {
+
+  .skills-section {
+    padding: 45px 10px;
+  }
+
+  .skills-title h2 {
+    font-size: 29px;
+  }
+
+  .skills-title-line {
+    width: 35px;
+  }
+
+  .skills-box {
+    padding: 25px 10px;
+  }
+
+  .skills-list {
+    column-gap: 5px;
+    row-gap: 25px;
+  }
+
+  .skill-icon {
+    font-size: 22px;
+  }
+
+  .skill-name {
+    font-size: 10px;
+  }
+}
